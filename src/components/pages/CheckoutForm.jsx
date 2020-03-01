@@ -23,7 +23,7 @@ class CheckoutForm extends PureComponent {
     super(props);
   }
 
-  pay() {
+  async pay() {
     const { $f7: app } = this;
     app.preloader.show();
     const {
@@ -31,7 +31,8 @@ class CheckoutForm extends PureComponent {
       cost,
     } = this.props;
     if (stripe) {
-      this.props.takePayment({stripe, cost});
+      const token = await stripe.createToken();
+      this.props.takePayment({token, cost});
       app.preloader.hide();
     } else {
       console.log('Error');

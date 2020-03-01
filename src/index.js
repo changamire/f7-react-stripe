@@ -18,7 +18,7 @@ Framework7.use(Framework7React);
 
 const AppWithStripe = (props) => {
   return (
-    <StripeProvider apiKey='pk_test_***'>
+    <StripeProvider apiKey='pk_test_*UPDATE_ME*'>
       <Provider store={store}>
         <App />
       </Provider>

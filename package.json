@@ -45,6 +45,7 @@
     "react-stripe-elements": "^4.0.1",
     "redux": "4.0.4",
     "redux-saga": "0.16.2",
+    "stripe": "^8.24.0",
     "url-loader": "^1.1.2"
   },
   "cordova": {

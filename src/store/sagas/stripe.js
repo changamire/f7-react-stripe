@@ -1,8 +1,8 @@
 import { takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
-const API_URL = '';
-const API_KEY = '';
+const API_URL = '*UPDATE_ME*';
+const API_KEY = '*UPDATE_ME*';
 
 import {
   TAKE_PAYMENT,
@@ -17,7 +17,7 @@ const HANDLERS = {
     const options = {
       headers: {'x-api-key': API_KEY}
     };
-      axios.post(PAYMENT_URL, {}, options).then(
+      axios.post(PAYMENT_URL, data, options).then(
         res => {
           console.log(res);
         }
